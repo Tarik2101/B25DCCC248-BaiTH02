@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dynamic Background Gradients */
+.bg-sunny { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+.bg-cloudy { background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); }
+.bg-foggy { background: linear-gradient(135deg, #accbee 0%, #e7f0fd 100%); }
+.bg-rainy { background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); }
+.bg-stormy { background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); }
+.bg-snowy { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
+.bg-default { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Bento Grid System */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.bento-main { grid-column: span 4; grid-row: span 2; }
+.bento-small-1 { grid-column: span 2; grid-row: span 1; }
+.bento-small-2 { grid-column: span 2; grid-row: span 1; }
+.bento-forecast { grid-column: span 4; }
+
+/* Desktop Grid Layout */
+@media (min-width: 1024px) {
+  .bento-main { grid-column: span 2; grid-row: span 2; }
+  .bento-small-1 { grid-column: span 2; grid-row: span 1; }
+  .bento-small-2 { grid-column: span 2; grid-row: span 1; }
+}
